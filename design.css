@@ -1,0 +1,489 @@
+body {
+    text-align: center;
+    margin: 0;
+    background-color: #0a0a0a; /* Darker background */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Darker track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff88; /* Neon green scrollbar thumb */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff00ff; /* Magenta scrollbar thumb on hover */
+}
+
+img {
+    height: 500px;
+    width: 1000px;
+}
+
+h1 {
+    color: #00ff88; /* Neon green for heading */
+    font-size: 5rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+    background: linear-gradient(8deg, #0a0a0a 0%, #ff00ff 50%, #00ff88 100%); /* Neon gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+h1:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    height: 8px;
+    width: 80%;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+h1 span {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff00ff; /* Magenta for animation */
+    animation: anim 5s linear infinite;
+}
+
+@keyframes anim {
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        left: 88%;
+    }
+}
+
+h3 {
+    color: #00ff88; /* Neon green for headings */
+    font-size: 40px;
+}
+
+.hero-section {
+    background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* White text */
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+}
+
+/* 2 */
+.about-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.about-title {
+    color: #00ff88; /* Neon green for title */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-intro {
+    color: #cccccc; /* Light gray for text */
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-icons {
+    color: #ffffff; /* White text */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon img {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+}
+
+.icon p {
+    color: #00ff88; /* Neon green for text */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* 3 */
+.services-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00ff88; /* Neon green for title */
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.service-item {
+    max-width: 250px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.service-item img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #00ff88; /* Neon green for headings */
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #cccccc; /* Light gray for text */
+}
+
+/* 4 */
+.portfolio-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.portfolio-title {
+    color: #00ff88; /* Neon green for title */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.portfolio-item {
+    max-width: 300px; /* Adjust width as needed */
+    text-align: center;
+    background-color: #1a1a1a; /* Darker background */
+    border: 1px solid #00ff88; /* Neon green border */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 255, 136, 0.2); /* Neon green shadow */
+}
+
+.portfolio-item img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #00ff88; /* Neon green for headings */
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #cccccc; /* Light gray for text */
+    padding: 0 15px 15px;
+}
+
+/* 5 */
+.blog-section {
+    padding: 40px;
+    background-color: #0a0a0a; /* Darker background */
+    text-align: center;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00ff88; /* Neon green for title */
+}
+
+.blog-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.blog-item {
+    max-width: 300px; /* Adjust width as needed */
+    text-align: center;
+    background-color: #1a1a1a; /* Darker background */
+    border: 1px solid #00ff88; /* Neon green border */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 255, 136, 0.2); /* Neon green shadow */
+}
+
+.blog-item img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+}
+
+.blog-item h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #00ff88; /* Neon green for headings */
+}
+
+.blog-item p {
+    font-size: 1rem;
+    color: #cccccc; /* Light gray for text */
+    padding: 0 15px 15px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #00ff88; /* Neon green for button */
+    color: #0a0a0a; /* Dark text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0a0a0a; /* Dark background on hover */
+    border: 2px solid #00ff88; /* Neon green border */
+    color: #00ff88; /* Neon green text on hover */
+}
+
+/* 6 */
+.testimonials-section {
+    padding: 40px;
+    background-color: #0a0a0a; /* Darker background */
+    text-align: center;
+}
+
+.testimonials-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00ff88; /* Neon green for title */
+}
+
+.testimonials-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.testimonial-item {
+    max-width: 300px; /* Adjust width as needed */
+    background-color: #1a1a1a; /* Darker background */
+    border: 1px solid #00ff88; /* Neon green border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 255, 136, 0.2); /* Neon green shadow */
+    position: relative;
+}
+
+p {
+    color: #cccccc; /* Light gray for text */
+}
+
+h2 {
+    color: #00ff88; /* Neon green for headings */
+}
+
+.testimonial-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #cccccc; /* Light gray for text */
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    color: #00ff88; /* Neon green for author */
+    text-align: right;
+}
+
+/* 7 */
+.cta-section {
+    padding: 40px;
+    background-color: #0a0a0a; /* Darker background */
+    color: #ffffff; /* White text */
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #00ff88; /* Neon green for title */
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #cccccc; /* Light gray for text */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00ff88; /* Neon green for button */
+    color: #0a0a0a; /* Dark text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0a0a0a; /* Dark background on hover */
+    border: 2px solid #00ff88; /* Neon green border */
+    color: #00ff88; /* Neon green text on hover */
+}
+
+/* 8 */
+.resources-section {
+    padding: 40px;
+    background-color: #0a0a0a; /* Darker background */
+    text-align: center;
+}
+
+.resources-title, .tools-title {
+    font-size: 2rem;
+    margin: 30px 0 15px;
+    color: #00ff88; /* Neon green for title */
+}
+
+.resources-description, .tools-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #cccccc; /* Light gray for text */
+}
+
+.resources-list, .tools-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.resource-item {
+    background-color: #1a1a1a; /* Darker background */
+    border: 1px solid #00ff88; /* Neon green border */
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    box-shadow: 0 2px 10px rgba(0, 255, 136, 0.2); /* Neon green shadow */
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #00ff88; /* Neon green for button */
+    color: #0a0a0a; /* Dark text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #0a0a0a; /* Dark background on hover */
+    border: 2px solid #00ff88; /* Neon green border */
+    color: #00ff88; /* Neon green text on hover */
+}
+
+.tools-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tool-link {
+    border: 1px solid #00ff88; /* Neon green border */
+    color: #00ff88; /* Neon green for links */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.tool-link:hover {
+    background-color: #00ff88; /* Neon green background on hover */
+    color: #0a0a0a; /* Dark text on hover */
+    text-decoration: none;
+}
+
+#hero {
+    background-image: url('your-background-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* White text */
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cta-button {
+    background-color: #00ff88; /* Neon green for button */
+    color: #0a0a0a; /* Dark text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0a0a0a; /* Dark background on hover */
+    border: 2px solid #00ff88; /* Neon green border */
+    color: #00ff88; /* Neon green text on hover */
+}
