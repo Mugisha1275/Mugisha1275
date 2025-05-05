@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Buying Page</title>
+    <link rel="stylesheet" href="laptop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+
+    <header>
+
+        <h1>Laptop Store</h1>
+        <p>Find the best laptops you want at the best prices want!</p>
+
+    </header>
+
+    <main>
+
+<!-- Total Price Display -->
+
+<div class="total-price">
+
+    <h3>Total: $<span id="total">0</span></h3>
+
+    <div class="payment-input">
+
+        <label for="amount-to-pay">Amount To Pay:</label>
+        <input type="number" id="amount-to-pay" placeholder="Enter Amount" min="0">
+        <button id="pay-now" class="payment-button">PAY</button>
+
+    </div>
+</div>
+<br>
+<br>
+
+        <!-- Laptops Section -->
+
+        <section class="laptops">
+
+
+            <!-- Apple MacBook Laptops -->
+
+            <div class="laptop" data-price="999">
+
+                <img src="Mac2.jpeg" alt="MacBook Air M2">
+                <h2>MacBook Air M2</h2>
+                <p class="price">$999</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="1999">
+
+                <img src="Mac1.jpeg" alt="MacBook Pro 14-inch">
+                <h2>MacBook Pro 14-inch</h2>
+                <p class="price">$1,999</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="2499">
+
+                <img src="Mac3.jpeg" alt="MacBook Pro 16-inch">
+                <h2>MacBook Pro 16-inch</h2>
+                <p class="price">$2,499</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <!-- HP Laptops -->
+
+            <div class="laptop" data-price="1299">
+
+                <img src="hp1.jpeg" alt="HP Spectre x360">
+                <h2>HP Spectre x360</h2>
+                <p class="price">$1,299</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="1099">
+
+                <img src="hp2.jpeg" alt="HP Envy 13">
+                <h2>HP Envy 13</h2>
+                <p class="price">$1,099</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="799">
+
+                <img src="hp3.jpeg" alt="HP Pavilion 15">
+                <h2>HP Pavilion 15</h2>
+                <p class="price">$799</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <!-- Dell Laptops -->
+
+            <div class="laptop" data-price="1199">
+
+                <img src="dell1.jpeg" alt="Dell XPS 13">
+                <h2>Dell XPS 13</h2>
+                <p class="price">$1,199</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="899">
+
+                <img src="dell2.jpeg" alt="Dell Inspiron 15">
+                <h2>Dell Inspiron 15</h2>
+                <p class="price">$899</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="2199">
+
+                <img src="dell3.jpeg" alt="Dell Alienware m15">
+                <h2>Dell Alienware m15</h2>
+                <p class="price">$2,199</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <!-- Lenovo Laptops -->
+
+            <div class="laptop" data-price="1499">
+
+                <img src="lenovo1.jpg" alt="Lenovo ThinkPad X1 Carbon">
+                <h2>Lenovo ThinkPad X1 Carbon</h2>
+                <p class="price">$1,499</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="1399">
+
+                <img src="lenovo2.jpg" alt="Lenovo Yoga 9i">
+                <h2>Lenovo Yoga 9i</h2>
+                <p class="price">$1,399</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="1299">
+
+                <img src="lenovo3.jpg" alt="Lenovo Legion 5">
+                <h2>Lenovo Legion 5</h2>
+                <p class="price">$1,299</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <!-- Acer Laptops -->
+
+            <div class="laptop" data-price="799">
+
+                <img src="Acer1.jpg" alt="Acer Swift 3">
+                <h2>Acer Swift 3</h2>
+                <p class="price">$799</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="1499">
+
+                <img src="Acer2.jpg" alt="Acer Predator Helios 300">
+                <h2>Acer Predator Helios 300</h2>
+                <p class="price">$1,499</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="699">
+
+                <img src="Acer3.jpg" alt="Acer Aspire 5">
+                <h2>Acer Aspire 5</h2>
+                <p class="price">$699</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <!-- Other Brands -->
+
+            <div class="laptop" data-price="1599">
+
+                <img src="Asus.jpg" alt="Asus ROG Zephyrus G14">
+                <h2>Asus ROG Zephyrus G14</h2>
+                <p class="price">$1,599</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="1299">
+
+                <img src="itel.jpg" alt="Microsoft Surface Laptop 4">
+                <h2>Microsoft Surface Laptop 4</h2>
+                <p class="price">$1,299</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+            <div class="laptop" data-price="2299">
+
+                <img src="Razer.jpg" alt="Razer Blade 15">
+                <h2>Razer Blade 15</h2>
+                <p class="price">$2,299</p>
+                <button class="add-to-cart">BUY</button>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Popup to Show Product Price -->
+
+        <div id="price-popup" class="popup">
+
+            <div class="popup-content">
+
+                <span class="close">&times;</span>
+                <p>Price: $<span id="selected-price">0</span></p>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2025 Laptop Store. All rights reserved.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>

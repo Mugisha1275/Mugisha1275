@@ -1,0 +1,774 @@
+/* Google font CDN link */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: #0a0a0a; /* Darker background */
+    overflow-x: hidden;
+}
+header {
+    background-color: #000; /* Black Header */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ffff; /* Neon cyan bottom border */
+}
+
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Darker track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff88; /* Neon green scrollbar thumb */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff00ff; /* Magenta scrollbar thumb on hover */
+}
+
+/* Navbar Styling */
+nav {
+    width: 100%;
+    height: 10vh;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: #00ff88; /* Neon green for logo */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    text-decoration: underline #00ff88; /* Neon green underline */
+    text-decoration-thickness: 10px;
+    text-underline-offset: 15px;
+    color: #ff00ff; /* Magenta for logo span */
+    text-shadow: 0 0 10px #ff00ff; /* Magenta glow */
+}
+
+.hamburg,
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #00ff88; /* Neon green for icons */
+    opacity: 0;
+    pointer-events: none;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+}
+
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: #ffffff; /* White text for links */
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #00ff88; /* Neon green underline */
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover {
+    color: #00ff88; /* Neon green on hover */
+}
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px #0a0a0a; /* Darker shadow */
+    transition: 0.2s linear;
+}
+
+.dropdown .links a {
+    display: flex;
+    color: #ffffff; /* White text for dropdown links */
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: #00ff88; /* Neon green background on hover */
+    color: #0a0a0a; /* Dark text on hover */
+}
+
+section {
+    width: 100%;
+    min-height: 90vh;
+}
+
+section .main-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    align-items: center;
+}
+
+.main-container .image {
+    width: 500px;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #00ff88; /* Neon green glow */
+}
+
+.main-container .image img {
+    width: 100%;
+}
+
+.main-container .image:hover {
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        scale: 1;     
+    }
+    50% {
+        scale: 1.05;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+.main-container .content {
+    color: #ffffff; /* White text */
+    width: 40%;
+}
+
+.content h1 {
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span {
+    color: #00ff88; /* Neon green for heading span */
+    text-decoration: underline #00ff88; /* Neon green underline */
+    text-underline-offset: 10px;
+    text-shadow: 0 0 10px #00ff88; /* Neon green glow */
+}
+
+.content .typewriter {
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 700;
+}
+
+.content .typewriter-text {
+    color: #ff00ff; /* Magenta for typewriter text */
+    text-shadow: 0 0 10px #ff00ff; /* Magenta glow */
+}
+
+.content p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+    color: #cccccc; /* Light gray for paragraphs */
+}
+/* Style for the "Don't have an account?" text */
+.link {
+    color: #ffffff; /* White text */
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.link a {
+    color: #00ff88; /* Neon green link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link a:hover {
+    color: black; /* Magenta hover effect */
+    text-decoration: underline;
+}
+
+/* Style for the "Login with:" text */
+.liw {
+    color: #ffffff; /* White text */
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.p-link {
+    color: #ffffff; /* White text */
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.p-link a {
+    color: #00ffff; /* Cyan link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.p-link a:hover {
+    color: #2600ff; /* Magenta hover effect */
+}
+
+.liw {
+    color: #ffffff; /* White text */
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+.icon a {
+    color: #00ffff; /* Cyan color for icons */
+    margin: 0 15px; /* Increased spacing between icons */
+    font-size: 24px; /* Larger icons */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Glow effect */
+    position: relative;
+    display: inline-block;
+}
+
+.icon a:hover {
+    color: #ff00ff; /* Magenta color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Enhanced glow on hover */
+}
+
+/* Add a subtle animation for a futuristic feel */
+@keyframes icon-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.icon a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 255, 0.2); /* Cyan glow background */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.icon a:hover::after {
+    transform: translate(-50%, -50%) scale(1.5); /* Expand glow effect */
+    opacity: 1;
+}
+
+/* Specific styling for each icon */
+.icon a.fa-gmail:hover {
+    color: #0bec1e; /* Gmail red */
+    text-shadow: 0 0 20px rgba(21, 206, 15, 0.7); /* Gmail red glow */
+}
+
+.icon a.fa-google:hover {
+    color: #b7f50c; /* Google blue */
+    text-shadow: 0 0 20px rgba(3, 248, 77, 0.7); /* Google blue glow */
+}
+
+.icon a.fa-tiktok:hover {
+    color: #080808; /* TikTok teal */
+    text-shadow: 0 0 20px rgba(54, 53, 53, 0.7); /* TikTok teal glow */
+}
+
+.icon a.fa-facebook:hover {
+    color: #2008f8; /* Facebook blue */
+    text-shadow: 0 0 20px rgb(29, 4, 253); /* Facebook blue glow */
+}
+.icon a.fa-twitter:hover {
+    color: #0a0a0a; /* Twitter blue */
+    text-shadow: 0 0 20px rgba(12, 12, 12, 0.7); /* Twitter blue glow */
+}
+
+.icon a.fa-instagram:hover {
+    color: #ff0606; /* Instagram pink */
+    text-shadow: 0 0 20px rgba(233, 9, 0); /* Instagram pink glow */
+}
+
+
+
+.content button {
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    background-color: #00ff88; /* Neon green for button */
+    color: #0a0a0a; /* Dark text */
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover {
+    scale: 1.1;
+    color: #00ff88; /* Neon green text on hover */
+    border: 2px solid #00ff88; /* Neon green border */
+    background-color: #0a0a0a; /* Dark background on hover */
+    box-shadow: 0 0 40px #00ff88; /* Neon green glow */
+}
+
+/* About Section Style */
+section .content {
+    width: 80%;
+    margin: 0px auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about .about-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .title {
+    text-decoration: underline #00ff88; /* Neon green underline */
+    text-underline-offset: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+section .title span {
+    color: #00ff88; /* Neon green for title */
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.section .title span::before,
+.section .title span::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    background: #00ff88; /* Neon green underline */
+    left: 0;
+    bottom: 0;
+}
+
+.section .title span::after {
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff00ff; /* Magenta for underline */
+}
+
+.about .about-details .left {
+    width: 45%;
+}
+
+.about .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-details .right {
+    width: 55%;
+}
+
+section .topic {
+    color: #00ff88; /* Neon green for topic */
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-details .right p {
+    text-align: justify;
+    color: #cccccc; /* Light gray for paragraphs */
+}
+
+section .button {
+    margin: 16px 0;
+}
+
+section .button button {
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    background: #00ff88; /* Neon green for button */
+    color: #0a0a0a; /* Dark text */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section .button button:hover {
+    border-color: #00ff88; /* Neon green border */
+    background-color: #0a0a0a; /* Dark background on hover */
+    color: #00ff88; /* Neon green text on hover */
+}
+
+/* Skills Section */
+.skills {
+    background: #0a0a0a; /* Dark background */
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    width: 200px;
+    background-color: #1a1a1a; /* Darker background for boxes */
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box .topic {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00ff88; /* Neon green for topic */
+}
+
+.box .per {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff00ff; /* Magenta for percentage */
+}
+
+.skills .content {
+    padding: 40px 0;
+}
+
+.skills .skills-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-details .text {
+    width: 50%;
+}
+
+.skills-details p {
+    color: #cccccc; /* Light gray for text */
+    text-align: justify;
+}
+
+.skills .skills-details .experience {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.skills-details .experience .num {
+    color: #00ff88; /* Neon green for number */
+    font-size: 80px;
+}
+
+.skills-details .experience .exp {
+    color: #cccccc; /* Light gray for text */
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+
+.skills-details .boxes {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-details .box {
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0;
+}
+
+.skills-details .boxes .topic {
+    font-size: 20px;
+    color: #00ff88; /* Neon green for topic */
+}
+
+.skills-details .boxes .per {
+    font-size: 60px;
+    color: #ff00ff; /* Magenta for percentage */
+}
+
+/* Services Section */
+.services .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 3 - 20px);
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: default;
+    color: #ffffff; /* White text */
+    transition: all 0.4s ease;
+}
+
+.services .boxes .box:hover {
+    background: #00ff88; /* Neon green on hover */
+    color: #0a0a0a; /* Dark text on hover */
+}
+
+.services .boxes .box .icon {
+    height: 50px;
+    width: 50px;
+    background: #00ff88; /* Neon green for icon background */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: #0a0a0a; /* Dark text */
+    margin: 0 auto 10px auto;
+    transition: all 0.4s ease;
+}
+
+.boxes .box:hover .icon {
+    background-color: #0a0a0a; /* Dark background on hover */
+    font-size: 50px;
+    color: #00ff88; /* Neon green text on hover */
+}
+
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+    color: #0a0a0a; /* Dark text on hover */
+}
+
+/* Contact Me CSS */
+.contact {
+    background: #0a0a0a; /* Dark background */
+}
+
+.contact .content {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.contact .text {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.contact .text .topic {
+    color: #00ff88; /* Neon green for topic */
+    text-decoration: underline #00ff88; /* Neon green underline */
+    text-underline-offset: 8px;
+}
+
+.contact .text p {
+    color: #cccccc; /* Light gray for text */
+}
+
+.contact .button button {
+    background-color: #00ff88; /* Neon green for button */
+    color: #0a0a0a; /* Dark text */
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.contact .button button:hover {
+    background-color: #0a0a0a; /* Dark background on hover */
+    color: #00ff88; /* Neon green text on hover */
+    border: 2px solid #00ff88; /* Neon green border */
+}
+
+/* Media Queries (unchanged) */
+@media (max-width: 1000px) {
+    .about .about-details {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about .about-details .left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-details .right {
+        width: 90%;
+        margin: 40px 0;
+    }
+
+    .services .boxes .box {
+        margin: 20px 0;
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .about .left img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 968px) {
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    section .main-container {
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg,
+    .cancel {
+        opacity: 1;
+        pointer-events: visible;
+    }
+
+    .main-container .content {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .social-links i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container .image {
+        z-index: 1;
+        width: 50%;
+        height: 60%;
+    }
+
+    .skills .skills-details {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .skills-details .text {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .skills-details .boxes {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .services .boxes .box {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .contact .text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-container .image {
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .main-container button {
+        margin-top: 15px;
+    }
+
+    .skills-details .boxes .per {
+        font-size: 50px;
+        color: #ff00ff; /* Magenta for percentage */
+    }
+}

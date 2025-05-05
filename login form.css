@@ -1,0 +1,235 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;   
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Darker track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: aqua; /* Neon green scrollbar thumb */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white; /* Magenta scrollbar thumb on hover */
+}
+
+
+.form {
+    
+    width: 300px;
+    height: 450px;
+    background: linear-gradient(to top, rgba(102, 51, 153, 0.8) 50%, rgba(70, 130, 180, 0.8) 50%); /* Purple to Steel Blue gradient */  
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(102, 51, 153, 0.5); /* Purple shadow for depth */
+    margin-top: 300px;
+}
+
+.form h2 {
+    font-size: 22px;
+    color: rgb(2, 0, 128); /* White text */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(102, 51, 153, 0.8); /* Purple glow effect */
+}
+
+.form input {
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #00ffff; /* Cyan border for futuristic look */
+    color: #ffffff; /* White text */
+    font-size: 15px;
+    margin-top: 30px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.form input::placeholder {
+    color: black; /* Light gray placeholder */
+    opacity: 1;
+}
+
+.btnn {
+    width: 240px;
+    height: 40px;
+    background: #00ffff; /* Cyan background */
+    color: #0a0a0a; /* Dark text */
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btnn:hover {
+    background: #0a0a0a; /* Dark background on hover */
+    color: #00ffff; /* Cyan text */
+    border: 1px solid #00ffff; /* Cyan border */
+}
+
+label{
+    color: #0bec1e;
+}
+/* Style for the "Don't have an account?" text */
+.link {
+    color: #ffffff; /* White text */
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.link a {
+    color: #00ff88; /* Neon green link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link a:hover {
+    color: black; /* Magenta hover effect */
+    text-decoration: underline;
+}
+
+/* Style for the "Login with:" text */
+.liw {
+    color: #ffffff; /* White text */
+    font-size: 14px;
+    margin-top: 20px;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.p-link {
+    color: #ffffff; /* White text */
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.p-link a {
+    color: #00ffff; /* Cyan link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.p-link a:hover {
+    color: #2600ff; /* Magenta hover effect */
+}
+
+.liw {
+    color: #ffffff; /* White text */
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+.icon a {
+    color: #00ffff; /* Cyan color for icons */
+    margin: 0 15px; /* Increased spacing between icons */
+    font-size: 24px; /* Larger icons */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Glow effect */
+    position: relative;
+    display: inline-block;
+}
+
+.icon a:hover {
+    color: #ff00ff; /* Magenta color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Enhanced glow on hover */
+}
+
+/* Add a subtle animation for a futuristic feel */
+@keyframes icon-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.icon a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 255, 0.2); /* Cyan glow background */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.icon a:hover::after {
+    transform: translate(-50%, -50%) scale(1.5); /* Expand glow effect */
+    opacity: 1;
+}
+
+/* Specific styling for each icon */
+.icon a.fa-gmail:hover {
+    color: #0bec1e; /* Gmail red */
+    text-shadow: 0 0 20px rgba(21, 206, 15, 0.7); /* Gmail red glow */
+}
+
+.icon a.fa-google:hover {
+    color: #b7f50c; /* Google blue */
+    text-shadow: 0 0 20px rgba(3, 248, 77, 0.7); /* Google blue glow */
+}
+
+.icon a.fa-tiktok:hover {
+    color: #080808; /* TikTok teal */
+    text-shadow: 0 0 20px rgba(54, 53, 53, 0.7); /* TikTok teal glow */
+}
+
+.icon a.fa-facebook:hover {
+    color: #2008f8; /* Facebook blue */
+    text-shadow: 0 0 20px rgb(29, 4, 253); /* Facebook blue glow */
+}
+.icon a.fa-twitter:hover {
+    color: #0a0a0a; /* Twitter blue */
+    text-shadow: 0 0 20px rgba(12, 12, 12, 0.7); /* Twitter blue glow */
+}
+
+.icon a.fa-instagram:hover {
+    color: #ff0606; /* Instagram pink */
+    text-shadow: 0 0 20px rgba(233, 9, 0); /* Instagram pink glow */
+}
+
+footer p {
+    color: red;
+    margin: 0;
+    margin-left: -400px;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 1090px;
+}

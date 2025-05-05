@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Darker track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff88; /* Neon green scrollbar thumb */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff00ff; /* Magenta scrollbar thumb on hover */
+}
+
+body {
+    text-align: center;
+    background-color: #0a0a0a; /* Darker background */
+}
+
+.about {
+    width: 100%;
+    padding: 78px 0px;
+    background-color: #0a0a0a; /* Darker background */
+}
+
+
+.main-container .image {
+    width: 500px;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #00ff88; /* Neon green glow */
+}
+
+.main-container .image img {
+    width: 100%;
+}
+
+.main-container .image:hover {
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        scale: 1;     
+    }
+    50% {
+        scale: 1.05;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+.about-text {
+    width: 550px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h1 {
+    color: #00ff88; /* Neon green for heading */
+    text-decoration: underline #00ff88; /* Neon green underline */
+    text-decoration-thickness: 5px;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: #ffffff; /* White text */
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+span {
+    color: #ff00ff; /* Magenta for span */
+}
+
+.about-text p {
+    color: #cccccc; /* Light gray for paragraphs */
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.resources-section {
+    padding: 40px;
+    background-color: #0a0a0a; /* Darker background */
+    text-align: center;
+}
+
+.resources-title, .tools-title {
+    font-size: 2rem;
+    margin: 30px 0 15px;
+    color: #00ff88; /* Neon green for titles */
+}
+
+.resources-description, .tools-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #cccccc; /* Light gray for descriptions */
+}
+
+.resources-list, .tools-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.resource-item {
+    background-color: #1a1a1a; /* Darker background for items */
+    border: 1px solid #00ff88; /* Neon green border */
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    box-shadow: 0 2px 10px rgba(0, 255, 136, 0.2); /* Neon green shadow */
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #00ff88; /* Neon green for button */
+    color: #0a0a0a; /* Dark text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #0a0a0a; /* Dark background on hover */
+    border: 2px solid #00ff88; /* Neon green border */
+    color: #00ff88; /* Neon green text on hover */
+}
+
+.tools-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+h2 {
+    color: #00ff88; /* Neon green for headings */
+}
+
+h3 {
+    color: #ffffff; /* White text */
+}
+
+p {
+    color: #cccccc; /* Light gray for paragraphs */
+}
+
+.tool-link {
+    border: 1px solid #00ff88; /* Neon green border */
+    color: #00ff88; /* Neon green for links */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.tool-link:hover {
+    background-color: #00ff88; /* Neon green background on hover */
+    color: #0a0a0a; /* Dark text on hover */
+    text-decoration: none;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sliding Puzzle Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ffd700;
+    }
+
+    #puzzle {
+      width: 312px;
+      height: 312px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 2px;
+      background: #444;
+      border: 4px solid #fff;
+      border-radius: 10px;
+    }
+
+    .tile {
+      width: 100px;
+      height: 100px;
+      background: #3498db;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 5px;
+      transition: background 0.2s;
+    }
+
+    .tile:hover {
+      background: #2980b9;
+    }
+
+    .empty {
+      background: #222;
+      cursor: default;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #219150;
+    }
+
+    #winMsg {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #2ecc71;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sliding Puzzle Game</h1>
+  <div id="puzzle"></div>
+  <button class="btn" onclick="shuffleTiles()">Shuffle</button>
+  <div id="winMsg">🎉 You Solved the Puzzle!</div>
+
+  <script>
+    const puzzle = document.getElementById("puzzle");
+    const winMsg = document.getElementById("winMsg");
+    let tiles = [];
+
+    function createTiles() {
+      tiles = [...Array(8).keys()].map(n => n + 1); // [1..8]
+      tiles.push(null); // empty tile
+      renderTiles();
+    }
+
+    function renderTiles() {
+      puzzle.innerHTML = "";
+      tiles.forEach((val, index) => {
+        const tile = document.createElement("div");
+        tile.classList.add("tile");
+        if (val === null) {
+          tile.classList.add("empty");
+        } else {
+          tile.textContent = val;
+          tile.onclick = () => tryMove(index);
+        }
+        puzzle.appendChild(tile);
+      });
+
+      checkWin();
+    }
+
+    function tryMove(index) {
+      const emptyIndex = tiles.indexOf(null);
+      const validMoves = getValidMoves(emptyIndex);
+      if (validMoves.includes(index)) {
+        [tiles[emptyIndex], tiles[index]] = [tiles[index], tiles[emptyIndex]];
+        renderTiles();
+      }
+    }
+
+    function getValidMoves(index) {
+      const moves = [];
+      const row = Math.floor(index / 3);
+      const col = index % 3;
+
+      // left
+      if (col > 0) moves.push(index - 1);
+      // right
+      if (col < 2) moves.push(index + 1);
+      // up
+      if (row > 0) moves.push(index - 3);
+      // down
+      if (row < 2) moves.push(index + 3);
+
+      return moves;
+    }
+
+    function shuffleTiles() {
+      for (let i = 0; i < 1000; i++) {
+        const emptyIndex = tiles.indexOf(null);
+        const moves = getValidMoves(emptyIndex);
+        const randMove = moves[Math.floor(Math.random() * moves.length)];
+        [tiles[emptyIndex], tiles[randMove]] = [tiles[randMove], tiles[emptyIndex]];
+      }
+      renderTiles();
+    }
+
+    function checkWin() {
+      const correct = [...Array(8).keys()].map(n => n + 1).concat(null);
+      const isWin = tiles.every((val, i) => val === correct[i]);
+      winMsg.style.display = isWin ? "block" : "none";
+    }
+
+    // Start game
+    createTiles();
+  </script>
+</body>
+</html>
